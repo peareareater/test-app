@@ -1,0 +1,54 @@
+.marquee {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.link {
+    color: #282c34;
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex;
+    width: 100px;
+    justify-content: center;
+}
+
+.link_animated {
+    animation: backAndForth 8s ease-in-out infinite;
+    animation-play-state: running;
+}
+
+.link_animated:hover {
+    animation-play-state: paused;
+}
+
+.link:hover {
+    color: #5cb896;
+}
+@keyframes backAndForth {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    45% {
+        transform: translateX(calc(500% + 10vw));
+    }
+    55% {
+        transform: translateX(calc(500% + 10vw));
+    }
+    90% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.undo-redo {
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+}
